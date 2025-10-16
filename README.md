@@ -1,6 +1,6 @@
 <h1>ExpNo 5 : Implement Simple Hill Climbing Algorithm</h1> 
-<h3>Name:             </h3>
-<h3>Register Number:             </h3>
+<h3>Name:   Tanisha S          </h3>
+<h3>Register Number: 212224050053            </h3>
 <H3>Aim:</H3>
 <p>Implement Simple Hill Climbing Algorithm and Generate a String by Mutating a Single Character at each iteration </p>
 <h2> Theory: </h2>
@@ -38,9 +38,45 @@ Feedback is provided in terms of heuristic function
 <h3>Step-4:</h3>
 <p> Lopp Step -2 and Step-3  until we achieve the score to be Zero to achieve Global Minima.</p>
 
+# Simple Hill Climbing Algorithm - String Generation
+```
+import random
+import string
+
+def random_string(length):
+    letters = string.ascii_letters + ' '
+    return ''.join(random.choice(letters) for _ in range(length))
+
+def fitness(current, target):
+    return sum(abs(ord(c1) - ord(c2)) for c1, c2 in zip(current, target))
+
+def mutate(parent):
+    index = random.randint(0, len(parent) - 1)
+    letters = string.ascii_letters + ' '
+    new_char = random.choice(letters)
+    child = list(parent)
+    child[index] = new_char
+    return ''.join(child)
+
+target = "Artificial Intelligence"
+parent = random_string(len(target))
+parent_score = fitness(parent, target)
+
+while True:
+    child = mutate(parent)
+    child_score = fitness(child, target)
+    if child_score <= parent_score:
+        parent = child
+        parent_score = child_score
+        print(f"Score: {parent_score}  Solution: {parent}")
+    if parent_score == 0:
+        break
+```
+
+
 <hr>
-<h2>Sample Input and Output</h2>
-<h2>Sample String:</h2> Artificial Intelligence
+<h2>Input and Output</h2>
+<h2> Input String:</h2> Artificial Intelligence
 <h2>Output:</h2>
 Score: 643  Solution :  8RzF:oG ]%;CPORRMe!zGvk<br>
 Score: 609  Solution :  8RzF:oG ]%;CPqRRMe!zGvk<br>

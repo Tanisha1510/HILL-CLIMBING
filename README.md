@@ -87,11 +87,14 @@ Score: 551  Solution :  8RzF:oGK]%;CPqRRWe!zGqk<br>
 Score: 551  Solution :  8RzF:oGK]%;CPqRRWe!zGqk<br>
 Score: 551  Solution :  8RzF:oGK]%;CPqRRWe!zGqk<br>
 Score: 551  Solution :  8RzF:oGK]%;CPqRRWe!zGqk<br>
-....................................................<br>
-..................................................<br>
+................................................<br>
+................................................<br>
 ................................................<br>
 Score: 1  Solution :  Artificial Intelligencf<br>
 Score: 1  Solution :  Artificial Intelligencf<br>
 Score: 1  Solution :  Artificial Intelligencf<br>
 Score: 1  Solution :  Artificial Intelligencf<br>
 Score: 0  Solution :  Artificial Intelligence<br>
+
+<h2>Result</h2>
+Implementation of Simple Hill Climbing Algorithm is achieved
